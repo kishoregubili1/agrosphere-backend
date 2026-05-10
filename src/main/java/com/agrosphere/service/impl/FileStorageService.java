@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Service
 public class FileStorageService {
-    @Value("${file.upload-dir:./uploads}") private String uploadDir;
+    @Value("${file.upload-dir:/tmp/uploads}") private String uploadDir;
     @Value("${app.base-url:http://localhost:8080/api}") private String baseUrl;
 
     public String store(MultipartFile file, String subDir) {
